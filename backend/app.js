@@ -6,12 +6,11 @@ const sendMail = require("./mailer");
 
 const app = express();
 
-// ✅ CORS (local + production ready)
 app.use(
   cors({
     origin: [
       "http://localhost:3000"
-      
+  
         ],
     methods: ["POST"],
     allowedHeaders: ["Content-Type"],

@@ -7,7 +7,7 @@ export default function ContactForm() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:9000/send-mail", {
+      const res = await fetch("https://portfolio-uylg.onrender.com/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
