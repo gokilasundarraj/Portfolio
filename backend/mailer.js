@@ -6,16 +6,13 @@ const sendMail = async ({ name, email, message }) => {
   try {
     const data = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
-      to: ["gokilasundarraj22@gmail.com"],
+      to: ["gokilas333@gmail.com"],
       replyTo: email,
       subject: `Portfolio Contact - ${name}`,
       text: `
-Name: ${name}
-User Email: ${email}
-
-Message:
-${message}
-      `,
+      Name: ${name}
+      User Email: ${email}
+      Message:${message}`,
     });
 
     return data;
