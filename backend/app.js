@@ -9,14 +9,15 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://portfolio-nine-nu-6wm5wrtb6j.vercel.app/"
+      "https://portfolio-nine-nu-6wm5wrtb6j.vercel.app"
   
         ],
-    methods: ["POST"],
+    methods: ["POST","GET"],
     allowedHeaders: ["Content-Type"],
   })
 );
 
+app.options("*", cors());
 app.use(express.json());
 
 app.post("/send-mail", async (req, res) => {
