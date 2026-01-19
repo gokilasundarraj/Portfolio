@@ -9,7 +9,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:3000"
+      "https://portfolio-nine-nu-6wm5wrtb6j.vercel.app/"
   
         ],
     methods: ["POST"],
