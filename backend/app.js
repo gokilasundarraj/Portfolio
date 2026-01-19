@@ -24,13 +24,13 @@ app.post("/send-mail", async (req, res) => {
     await sendMail(req.body);
     res.status(200).json({ success: true, message: "Mail sent successfully" });
   } catch (error) {
-    console.error("MAIL ERROR 👉", error);
+    console.error("MAIL ERROR", error);
     res.status(500).json({ success: false, message: "Mail failed" });
   }
 });
 
 app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
+  res.send("Backend is running");
 });
 
 const PORT = process.env.PORT || 9000;
